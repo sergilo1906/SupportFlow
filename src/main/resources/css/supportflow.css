@@ -1,0 +1,58 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 15px;
+    -fx-background-color: #f4f6f8;
+}
+
+.inicio {
+    -fx-padding: 40;
+}
+
+.encabezado {
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #244b70;
+}
+
+.descripcion {
+    -fx-font-size: 20px;
+    -fx-text-fill: #253444;
+}
+
+.estado {
+    -fx-text-fill: #596675;
+}
+
+.pantalla {
+    -fx-background-color: #f4f6f8;
+}
+
+.titulo {
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #244b70;
+}
+
+.aviso {
+    -fx-text-fill: #315675;
+    -fx-padding: 8 0 8 0;
+}
+
+.button {
+    -fx-padding: 9 14 9 14;
+    -fx-cursor: hand;
+}
+
+.text-field, .text-area, .combo-box {
+    -fx-font-size: 14px;
+}
+
+.formulario {
+    -fx-padding: 10;
+}
+
+.contador {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #244b70;
+}

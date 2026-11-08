@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supportflow.controller.EstadisticasController" styleClass="pantalla"><padding><Insets top="22" right="22" bottom="22" left="22"/></padding>
+<center><VBox spacing="18" alignment="CENTER">
+<Label text="Estadísticas" styleClass="titulo"/>
+<GridPane hgap="50" vgap="16" maxWidth="500"><Label text="Total de tickets" GridPane.rowIndex="0" GridPane.columnIndex="0"/><Label fx:id="lbTotalTickets" text="0" styleClass="contador" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+<Label text="Abiertos" GridPane.rowIndex="1" GridPane.columnIndex="0"/><Label fx:id="lbAbiertos" text="0" styleClass="contador" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+<Label text="En progreso" GridPane.rowIndex="2" GridPane.columnIndex="0"/><Label fx:id="lbEnProgreso" text="0" styleClass="contador" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+<Label text="Resueltos" GridPane.rowIndex="3" GridPane.columnIndex="0"/><Label fx:id="lbResueltos" text="0" styleClass="contador" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+<Label text="Cerrados" GridPane.rowIndex="4" GridPane.columnIndex="0"/><Label fx:id="lbCerrados" text="0" styleClass="contador" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+<Label text="Total de equipos" GridPane.rowIndex="5" GridPane.columnIndex="0"/><Label fx:id="lbTotalEquipos" text="0" styleClass="contador" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+<Label text="Equipos activos" GridPane.rowIndex="6" GridPane.columnIndex="0"/><Label fx:id="lbActivos" text="0" styleClass="contador" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+<Label text="Equipos dados de baja" GridPane.rowIndex="7" GridPane.columnIndex="0"/><Label fx:id="lbBaja" text="0" styleClass="contador" GridPane.rowIndex="7" GridPane.columnIndex="1"/></GridPane>
+<HBox spacing="10" alignment="CENTER"><Button fx:id="btnActualizar" text="Actualizar" onAction="#onActualizar"/><Button fx:id="btnVolver" text="Panel principal" onAction="#onVolver"/></HBox>
+</VBox></center>
+</BorderPane>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supportflow.controller.UsuariosController" styleClass="pantalla"><padding><Insets top="22" right="22" bottom="22" left="22"/></padding>
+<center><VBox spacing="14">
+<Label text="Administración de usuarios locales" styleClass="titulo"/>
+<Label text="Las cuentas Firebase se registran desde el acceso. Aquí se administran los registros locales; no se eliminan cuentas de Firebase." wrapText="true"/>
+<TableView fx:id="tablaUsuarios" VBox.vgrow="ALWAYS"><columns>
+<TableColumn text="ID" prefWidth="55"><cellValueFactory><PropertyValueFactory property="id"/></cellValueFactory></TableColumn>
+<TableColumn text="Nombre" prefWidth="240"><cellValueFactory><PropertyValueFactory property="nombre"/></cellValueFactory></TableColumn>
+<TableColumn text="Email" prefWidth="280"><cellValueFactory><PropertyValueFactory property="email"/></cellValueFactory></TableColumn>
+<TableColumn text="Rol" prefWidth="120"><cellValueFactory><PropertyValueFactory property="rol"/></cellValueFactory></TableColumn>
+<TableColumn text="Firebase UID" prefWidth="250"><cellValueFactory><PropertyValueFactory property="firebaseUid"/></cellValueFactory></TableColumn>
+</columns></TableView>
+<HBox spacing="10"><Button fx:id="btnEditar" text="Consultar / editar" onAction="#onEditar"/><TextField fx:id="tfNombre" promptText="Nombre local"/><Button fx:id="btnGuardarNombre" text="Guardar nombre" onAction="#onGuardarNombre"/></HBox>
+<HBox spacing="10"><ComboBox fx:id="cbRol" promptText="Selecciona rol"/><Button fx:id="btnCambiarRol" text="Cambiar rol" onAction="#onCambiarRol"/><Button fx:id="btnEliminar" text="Eliminar registro local" onAction="#onEliminar"/><Button fx:id="btnVolver" text="Panel principal" onAction="#onVolver"/></HBox>
+<Label fx:id="lbMensaje" styleClass="aviso"/>
+</VBox></center>
+</BorderPane>
+

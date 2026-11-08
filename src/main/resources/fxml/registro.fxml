@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supportflow.controller.RegistroController" styleClass="pantalla"><padding><Insets top="22" right="22" bottom="22" left="22"/></padding>
+<center><VBox fx:id="panel" spacing="12" alignment="CENTER_LEFT" maxWidth="540">
+<Label text="Crear cuenta Firebase" styleClass="titulo"/>
+<Label text="Nombre"/><TextField fx:id="tfNombre"/>
+<Label text="Email"/><TextField fx:id="tfEmail"/>
+<Label text="Contraseña"/><PasswordField fx:id="pfContrasena"/>
+<Label text="Confirmar contraseña"/><PasswordField fx:id="pfConfirmacion"/>
+<Label text="El rol local inicial será EMPLEADO. Verifica el correo antes de entrar." wrapText="true"/>
+<Label fx:id="lbMensaje" wrapText="true" styleClass="aviso"/>
+<HBox spacing="12"><Button fx:id="btnRegistrar" text="Registrarse" onAction="#onRegistrar"/><Button fx:id="btnVolver" text="Volver al acceso" onAction="#onVolver"/></HBox>
+</VBox></center>
+</BorderPane>
+

@@ -1,0 +1,8 @@
+# Copiar a config/firebase.properties (ignorado por Git).
+# Firebase Console > Configuracion del proyecto > General > Clave de API web.
+firebase.apiKey=
+
+# Opcional: UID exacto de la cuenta verificada que sera el primer ADMIN.
+# Authentication > Usuarios > copiar UID. Dejar vacio hasta decidirlo.
+# Solo se aplica si no existe ningun ADMIN local.
+admin.uid=

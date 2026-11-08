@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supportflow.controller.InventarioController" styleClass="pantalla"><padding><Insets top="22" right="22" bottom="22" left="22"/></padding>
+<center><VBox spacing="12">
+<Label text="Inventario informático" styleClass="titulo"/>
+<Label text="Selecciona un equipo y pulsa Consultar / editar. ADMIN realiza altas, asignaciones y bajas; TECNICO modifica datos; EMPLEADO consulta sus equipos." wrapText="true"/>
+<HBox spacing="18" VBox.vgrow="ALWAYS">
+<VBox spacing="10" HBox.hgrow="ALWAYS" prefWidth="740">
+<TableView fx:id="tablaEquipos" VBox.vgrow="ALWAYS"><columns>
+<TableColumn text="ID" prefWidth="45"><cellValueFactory><PropertyValueFactory property="id"/></cellValueFactory></TableColumn>
+<TableColumn text="Nombre" prefWidth="160"><cellValueFactory><PropertyValueFactory property="nombre"/></cellValueFactory></TableColumn>
+<TableColumn text="Tipo" prefWidth="90"><cellValueFactory><PropertyValueFactory property="tipo"/></cellValueFactory></TableColumn>
+<TableColumn text="Marca" prefWidth="90"><cellValueFactory><PropertyValueFactory property="marca"/></cellValueFactory></TableColumn>
+<TableColumn text="Modelo" prefWidth="100"><cellValueFactory><PropertyValueFactory property="modelo"/></cellValueFactory></TableColumn>
+<TableColumn text="Serie" prefWidth="120"><cellValueFactory><PropertyValueFactory property="numeroSerie"/></cellValueFactory></TableColumn>
+<TableColumn text="Estado" prefWidth="90"><cellValueFactory><PropertyValueFactory property="estado"/></cellValueFactory></TableColumn>
+<TableColumn text="Usuario ID" prefWidth="85"><cellValueFactory><PropertyValueFactory property="usuarioAsignado"/></cellValueFactory></TableColumn>
+</columns></TableView>
+<HBox spacing="10"><Button fx:id="btnEditar" text="Consultar / editar" onAction="#onEditar"/><Button fx:id="btnNuevo" text="Nuevo" onAction="#onNuevo"/><Button fx:id="btnBaja" text="Dar de baja" onAction="#onBaja"/></HBox>
+</VBox>
+<ScrollPane fitToWidth="true" prefWidth="300"><content><VBox spacing="7" styleClass="formulario">
+<Label text="Nombre"/><TextField fx:id="tfNombre"/>
+<Label text="Tipo"/><TextField fx:id="tfTipo"/>
+<Label text="Marca"/><TextField fx:id="tfMarca"/>
+<Label text="Modelo"/><TextField fx:id="tfModelo"/>
+<Label text="Número de serie único"/><TextField fx:id="tfSerie"/>
+<Label text="Estado"/><ComboBox fx:id="cbEstado" maxWidth="Infinity"/>
+<Label text="Usuario asignado"/><ComboBox fx:id="cbUsuario" promptText="Sin usuario" maxWidth="Infinity"/>
+<Button fx:id="btnSinUsuario" text="Sin usuario" onAction="#onSinUsuario"/>
+<Button fx:id="btnGuardar" text="Guardar equipo" onAction="#onGuardar"/>
+</VBox></content></ScrollPane>
+</HBox>
+<Label fx:id="lbMensaje" styleClass="aviso"/>
+<Button fx:id="btnVolver" text="Panel principal" onAction="#onVolver"/>
+</VBox></center>
+</BorderPane>
+

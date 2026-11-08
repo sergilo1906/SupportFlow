@@ -1,0 +1,22 @@
+{
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-21",
+      "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot",
+      "default": true
+    }
+  ],
+  "maven.executable.preferMavenWrapper": true,
+  "maven.terminal.customEnv": [
+    {
+      "environmentVariable": "JAVA_HOME",
+      "value": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot"
+    }
+  ],
+  "terminal.integrated.env.windows": {
+    "JAVA_HOME": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot",
+    "PATH": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot\\bin;${env:PATH}"
+  },
+  "[java]": { "editor.defaultFormatter": "redhat.java" },
+  "files.exclude": { "**/target": true }
+}

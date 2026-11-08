@@ -1,0 +1,61 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "SupportFlow: compilar",
+      "type": "shell",
+      "command": ".\\mvnw.cmd clean compile",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "JAVA_HOME": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot"
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$javac"
+    },
+    {
+      "label": "SupportFlow: pruebas",
+      "type": "shell",
+      "command": ".\\mvnw.cmd clean test",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "JAVA_HOME": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot"
+        }
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": "$javac"
+    },
+    {
+      "label": "SupportFlow: ejecutar",
+      "type": "shell",
+      "command": ".\\mvnw.cmd javafx:run",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "JAVA_HOME": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "SupportFlow: DEMO",
+      "type": "shell",
+      "command": ".\\mvnw.cmd javafx:run \"-Dsupportflow.demo=true\"",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "JAVA_HOME": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.12.101-hotspot"
+        }
+      },
+      "problemMatcher": []
+    }
+  ]
+}

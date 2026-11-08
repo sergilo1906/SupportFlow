@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supportflow.controller.TicketController" styleClass="pantalla"><padding><Insets top="22" right="22" bottom="22" left="22"/></padding>
+<center><VBox spacing="14">
+<Label text="Incidencias" styleClass="titulo"/>
+<HBox spacing="10" alignment="CENTER_LEFT"><Label text="Estado"/><ComboBox fx:id="cbEstado" promptText="Todos los estados"/><Label text="Prioridad"/><ComboBox fx:id="cbPrioridad" promptText="Todas las prioridades"/><Button fx:id="btnFiltrar" text="Filtrar" onAction="#onFiltrar"/><Button fx:id="btnLimpiar" text="Quitar filtros" onAction="#onLimpiarFiltros"/></HBox>
+<TableView fx:id="tablaTickets" VBox.vgrow="ALWAYS"><columns>
+<TableColumn text="ID" prefWidth="60"><cellValueFactory><PropertyValueFactory property="id"/></cellValueFactory></TableColumn>
+<TableColumn text="Título" prefWidth="300"><cellValueFactory><PropertyValueFactory property="titulo"/></cellValueFactory></TableColumn>
+<TableColumn text="Prioridad" prefWidth="110"><cellValueFactory><PropertyValueFactory property="prioridad"/></cellValueFactory></TableColumn>
+<TableColumn text="Estado" prefWidth="130"><cellValueFactory><PropertyValueFactory property="estado"/></cellValueFactory></TableColumn>
+<TableColumn text="Creador ID" prefWidth="100"><cellValueFactory><PropertyValueFactory property="usuarioCreador"/></cellValueFactory></TableColumn>
+<TableColumn text="Técnico ID" prefWidth="100"><cellValueFactory><PropertyValueFactory property="tecnicoAsignado"/></cellValueFactory></TableColumn>
+<TableColumn text="Fecha" prefWidth="210"><cellValueFactory><PropertyValueFactory property="fechaCreacion"/></cellValueFactory></TableColumn>
+</columns></TableView>
+<Label fx:id="lbMensaje" styleClass="aviso"/>
+<HBox spacing="10"><Button fx:id="btnCrear" text="Crear ticket" onAction="#onCrear"/><Button fx:id="btnConsultar" text="Consultar detalle" onAction="#onConsultar"/><Button fx:id="btnEliminar" text="Eliminar" onAction="#onEliminar"/><Button fx:id="btnVolver" text="Panel principal" onAction="#onVolver"/></HBox>
+</VBox></center>
+</BorderPane>
+

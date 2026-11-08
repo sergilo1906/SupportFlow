@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supportflow.controller.FormularioTicketController" styleClass="pantalla"><padding><Insets top="22" right="22" bottom="22" left="22"/></padding>
+<center><VBox spacing="12" maxWidth="760" alignment="CENTER_LEFT">
+<Label text="Nueva incidencia" styleClass="titulo"/>
+<Label text="Título (máximo 150 caracteres)"/><TextField fx:id="tfTitulo"/>
+<Label text="Descripción"/><TextArea fx:id="taDescripcion" prefRowCount="7" wrapText="true"/>
+<Label text="Prioridad"/><ComboBox fx:id="cbPrioridad" maxWidth="Infinity"/>
+<Label text="Equipo relacionado (opcional)"/><ComboBox fx:id="cbEquipo" promptText="Sin equipo" maxWidth="Infinity"/>
+<Button fx:id="btnSinEquipo" text="Sin equipo relacionado" onAction="#onSinEquipo"/>
+<HBox spacing="10"><Button fx:id="btnGuardar" text="Guardar ticket" onAction="#onGuardar"/><Button fx:id="btnVolver" text="Volver" onAction="#onVolver"/></HBox>
+</VBox></center>
+</BorderPane>
+

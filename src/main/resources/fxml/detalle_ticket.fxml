@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supportflow.controller.DetalleTicketController" styleClass="pantalla"><padding><Insets top="22" right="22" bottom="22" left="22"/></padding>
+<center><VBox spacing="12">
+<Label text="Detalle de incidencia" styleClass="titulo"/>
+<ScrollPane fitToWidth="true" prefHeight="190"><content><Label fx:id="lbDatos" wrapText="true" maxWidth="Infinity"/></content></ScrollPane>
+<HBox spacing="10" alignment="CENTER_LEFT"><Label text="Estado"/><ComboBox fx:id="cbEstado"/><Button fx:id="btnCambiarEstado" text="Cambiar estado" onAction="#onCambiarEstado"/></HBox>
+<HBox spacing="10" alignment="CENTER_LEFT"><Label text="Técnico"/><ComboBox fx:id="cbTecnico" promptText="Sin asignar" prefWidth="360"/><Button fx:id="btnSinTecnico" text="Sin técnico" onAction="#onSinTecnico"/><Button fx:id="btnAsignar" text="Guardar asignación" onAction="#onAsignar"/></HBox>
+<HBox spacing="14" VBox.vgrow="ALWAYS">
+<VBox spacing="6" HBox.hgrow="ALWAYS" prefWidth="500"><Label text="Comentarios (fecha y autor)"/><ListView fx:id="listaComentarios" VBox.vgrow="ALWAYS"/></VBox>
+<VBox spacing="6" HBox.hgrow="ALWAYS" prefWidth="500"><Label text="Historial (fecha y autor)"/><ListView fx:id="listaHistorial" VBox.vgrow="ALWAYS"/></VBox>
+</HBox>
+<TextArea fx:id="taComentario" promptText="Añadir comentario..." prefRowCount="2" wrapText="true"/>
+<HBox spacing="10"><Button fx:id="btnComentar" text="Añadir comentario" onAction="#onComentar"/><Button fx:id="btnVolver" text="Volver a incidencias" onAction="#onVolver"/></HBox>
+</VBox></center>
+</BorderPane>
+

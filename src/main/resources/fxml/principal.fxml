@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supportflow.controller.PrincipalController" styleClass="pantalla"><padding><Insets top="22" right="22" bottom="22" left="22"/></padding>
+<top><VBox spacing="12">
+<Label text="SupportFlow" styleClass="encabezado"/><Label fx:id="lbUsuario" styleClass="titulo"/>
+<Label fx:id="lbModo" wrapText="true" styleClass="aviso"/>
+</VBox></top>
+<center><VBox spacing="22" alignment="CENTER">
+<Label text="Selecciona un módulo" styleClass="titulo"/>
+<HBox spacing="18" alignment="CENTER"><Button fx:id="btnTickets" text="Incidencias" onAction="#onTickets"/><Button fx:id="btnInventario" text="Inventario" onAction="#onInventario"/><Button fx:id="btnUsuarios" text="Usuarios" onAction="#onUsuarios"/><Button fx:id="btnEstadisticas" text="Estadísticas" onAction="#onEstadisticas"/></HBox>
+<Label text="Los datos y operaciones disponibles dependen de tu rol."/>
+</VBox></center>
+<bottom><HBox alignment="CENTER_RIGHT"><Button fx:id="btnCerrarSesion" text="Cerrar sesión" onAction="#onCerrarSesion"/></HBox></bottom>
+</BorderPane>
+

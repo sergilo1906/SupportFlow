@@ -1,0 +1,26 @@
+# Java y Maven
+/target/
+*.class
+
+# Base de datos local y archivos auxiliares SQLite
+/data/*
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+
+# Configuracion privada
+/config/firebase.properties
+.env
+.env.*
+*.local
+
+# Editor, sistema y logs
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+Thumbs.db
+.DS_Store
+*.log
+*.pid
